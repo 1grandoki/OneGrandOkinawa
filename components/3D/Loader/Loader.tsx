@@ -1,5 +1,4 @@
 "use client";
-import { transition } from "@chakra-ui/react";
 import { Html, useProgress } from "@react-three/drei";
 import { animate } from "framer-motion";
 
