@@ -4,11 +4,13 @@ import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import Environement from "./Environment";
 import Loader from "./Loader/Loader";
-import { Model } from "@/components/3D/Models/Logo";
+import { Logo } from "@/components/3D/Models/Logo";
 import gsap from "gsap";
+import { Logo_Mobile } from "./Models/Logo_mobile";
 type Props = {};
 
 export default function Scene() {
+  const [Z, setZ] = useState(3);
   const CameraControls = () => {
     useFrame((state) => {
       state.camera.lookAt(0, 0, 0);
@@ -29,7 +31,7 @@ export default function Scene() {
           duration: 1,
           ease: "power2.out",
         });
-        camera.position.z = 3;
+        camera.position.z = Z;
       }
     };
 
@@ -58,16 +60,37 @@ export default function Scene() {
     );
   };
 
+  const [width, setWidth] = useState<number>(0);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+    if (window.innerWidth <= 640) {
+      setZ(5);
+    }
+  }
+  useEffect(() => {
+    handleWindowSizeChange();
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 640;
   return (
     <Canvas
-      camera={{ position: [0, 0, 3] }}
+      camera={{ position: [0, 0, Z] }}
       shadows
       className="!absolute !top-0 -z-10 !left-0 w-full !h-full"
     >
       <Suspense fallback={<Loader></Loader>}>
         {/* <EffectS /> */}
         <Environement />
-        <Model rotation={[Math.PI / 2, 0, 0]} />
+        {isMobile ? (
+          <Logo_Mobile rotation={[Math.PI / 2, 0, 0]} />
+        ) : (
+          <Logo rotation={[Math.PI / 2, 0, 0]} />
+        )}
       </Suspense>
       <CameraControls />
     </Canvas>

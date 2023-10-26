@@ -53,7 +53,7 @@ export default function Header({}: Props) {
     <div
       ref={headerRef}
       style={{ transition: "top 0.3s" }}
-      className="fixed bg-transparent border-b-[1px] border-white/10 top-0 text-white mx-auto w-full select-none z-10"
+      className="fixed bg-transparent border-b-[1px] border-white/10 top-0 mx-auto w-full select-none z-10"
     >
       <Menu as="div" className="mx-auto flex max-w-[1200px] flex-col">
         <div className="mx-5 flex h-20 min-h-[48px] items-center justify-normal md:justify-between">
@@ -155,15 +155,13 @@ export default function Header({}: Props) {
               type="button"
               className="rounded-full cursor-pointer select-none text-base font-medium transition-all duration-200 drop-shadow-md shadow-peacoat-400 hover:drop-shadow-xl hover:scale-110 active:scale-90 flex"
             >
-              <SlMagnifier className={"sm:w-6 w-5 h-5 sm:h-6 text-white"} />
+              <SlMagnifier className={"sm:w-6 w-5 h-5 sm:h-6"} />
             </button>
             <button
               type="button"
               className="rounded-full cursor-pointer select-none text-base font-medium transition-all duration-200 drop-shadow-md shadow-peacoat-400 hover:drop-shadow-xl hover:scale-110 active:scale-90 flex"
             >
-              <HiOutlineShoppingBag
-                className={"sm:w-6 w-5 h-5 sm:h-6 text-white"}
-              />
+              <HiOutlineShoppingBag className={"sm:w-6 w-5 h-5 sm:h-6"} />
             </button>
           </motion.div>
         </div>
@@ -176,7 +174,7 @@ export default function Header({}: Props) {
           leaveFrom="transform opacity-100 "
           leaveTo="transform opacity-0 "
         >
-          <Menu.Items className="px-5 bg-violet-500/40 backdrop-blur-[6px] text-sm sm:px-16 xl:px-28">
+          <Menu.Items className="px-5 bg-teal-500/40 backdrop-blur-[6px] text-sm sm:px-16 xl:px-28">
             {({ open }) => (
               <div className="flex overflow-hidden md:hidden">
                 <AnimatePresence>
@@ -210,15 +208,13 @@ export default function Header({}: Props) {
                           type="button"
                           className="hidden rounded-full cursor-pointer select-none text-base font-medium transition-all duration-200 drop-shadow-md shadow-peacoat-400 hover:drop-shadow-xl hover:scale-110 active:scale-90 lg:flex"
                         >
-                          <SlMagnifier className={"w-6 h-6 text-white"} />
+                          <SlMagnifier className={"w-6 h-6"} />
                         </button>
                         <button
                           type="button"
                           className="hidden rounded-full cursor-pointer select-none text-base font-medium transition-all duration-200 drop-shadow-md shadow-peacoat-400 hover:drop-shadow-xl hover:scale-110 active:scale-90 lg:flex"
                         >
-                          <HiOutlineShoppingBag
-                            className={"w-6 h-6 text-white"}
-                          />
+                          <HiOutlineShoppingBag className={"w-6 h-6"} />
                         </button>
                       </motion.div>
                       <nav className="w-full py-2 ">

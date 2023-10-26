@@ -9,7 +9,7 @@ export default function Newsletter({}: Props) {
   const [Email, setEmail] = useState<string>("");
 
   return (
-    <div className="bg-transparent border-b-[1px] border-t-[1px] py-10 flex items-center justify-center border-white/10 top-0 text-white mx-auto w-full select-none z-10">
+    <div className="bg-transparent border-b-[1px] border-t-[1px] py-10 flex items-center justify-center border-white/10 top-0 mx-auto w-full select-none z-10">
       <div className="flex flex-col items-center justify-center gap-y-1">
         <motion.div
           viewport={{ once: true }}
@@ -46,11 +46,11 @@ export default function Newsletter({}: Props) {
               required
               id={"email"}
               type="email"
-              className="peer pt-3 pb-1 mt-4 px-3 w-full border-[1px] border-white/50 outline-none bg-[#41007b] focus:ring-1 ring-white/50 duration-300 transition-all"
+              className="peer pt-3 pb-1 mt-4 px-3 w-full border-[1px] border-white/50 outline-none bg-[#007b56] focus:ring-1 ring-white/50 duration-300 transition-all"
             ></input>
             <label
               htmlFor="email"
-              className={`absolute duration-300 transition-all origin-top-left top-1/2 left-3 ${
+              className={`text-white absolute duration-300 transition-all origin-top-left top-1/2 left-3 ${
                 Email != ""
                   ? "scale-75 -translate-y-[60%]"
                   : "-translate-y-[15%]"

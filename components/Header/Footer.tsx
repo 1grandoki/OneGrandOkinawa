@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Footer({}: Props) {
   return (
-    <div className="overflow-hidden bg-transparent py-10 flex items-center justify-center top-0 text-white mx-auto w-full select-none z-10 text-xs text-center sm:text-sm font-light">
+    <div className="overflow-hidden bg-transparent py-10 flex items-center justify-center top-0 mx-auto w-full select-none z-10 text-xs text-center sm:text-sm font-light">
       <motion.div
         viewport={{ once: true }}
         initial={{ y: 30, opacity: 0 }}

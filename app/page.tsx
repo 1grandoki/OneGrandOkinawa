@@ -12,7 +12,7 @@ const goth = Dela_Gothic_One({
 });
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-screen flex flex-col items-center mx-auto justify-center text-white">
+    <div className="relative min-h-screen w-screen flex flex-col items-center mx-auto justify-center text-teal-950">
       <Hero />
 
       {/* 2nd Section */}
