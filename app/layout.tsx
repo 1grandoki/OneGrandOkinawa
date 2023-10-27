@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Dela_Gothic_One, Krona_One, Montserrat } from "next/font/google";
+import {
+  Dela_Gothic_One as dela_Gothic_One,
+  Krona_One,
+  Montserrat,
+} from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header/Header";
 import Newsletter from "@/components/Header/Newsletter";
@@ -7,7 +11,7 @@ import Footer from "@/components/Header/Footer";
 import Scene from "@/components/3D/Scene";
 
 const mont = Montserrat({ variable: "--font-Mont", subsets: ["latin"] });
-const goth = Krona_One({
+const goth = dela_Gothic_One({
   variable: "--font-Goth",
   subsets: ["latin"],
   weight: "400",

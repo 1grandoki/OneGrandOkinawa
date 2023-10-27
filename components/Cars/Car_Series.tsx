@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Car_Card from "./car_Card";
-import img1 from "@/public/Images/1.webp";
-import img2 from "@/public/Images/2.webp";
-import img3 from "@/public/Images/3.webp";
-import img4 from "@/public/Images/4.webp";
 import { motion } from "framer-motion";
+import { getCollection } from "@/lib/Shopify";
+import { Body, Collection } from "@/lib/Shopify/types";
 type Props = {};
 
 export default function Car_Series({}: Props) {
+  const [Data, setData] = useState<Body | null>(null);
+  useEffect(() => {
+    const Fetch = async () => {
+      const result = await getCollection();
+      if (result?.status === 200) {
+        setData(result);
+      }
+    };
+    Fetch();
+  }, []);
+
   return (
     <div className="flex overflow-hidden flex-col items-start  max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.h1
@@ -26,10 +35,21 @@ export default function Car_Series({}: Props) {
       </motion.h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
-        <Car_Card image={img3.src} carType={"JDM"} />
+        {Data &&
+          Data.body.data.collections.edges.map((edge: any, index: number) => {
+            if (edge.node.title != "izyrent")
+              return (
+                <Car_Card
+                  key={index}
+                  image={edge.node.products.edges[0].node.featuredImage.url}
+                  carType={edge.node.title}
+                />
+              );
+          })}
+        {/* <Car_Card image={img3.src} carType={"JDM"} />
         <Car_Card image={img2.src} carType={"Executive"} />
         <Car_Card image={img4.src} carType={"Exotic"} />
-        <Car_Card image={img1.src} carType={"Hyper"} />
+        <Car_Card image={img1.src} carType={"Hyper"} /> */}
       </div>
     </div>
   );
