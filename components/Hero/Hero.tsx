@@ -37,7 +37,7 @@ export default function Hero({}: Props) {
             stiffness: 50,
             delay: 0.3,
           }}
-          className="font-Zen flex items-center justify-center md:gap-x-[6vw] gap-x-[3vw] w-full mt-[15vh] sm:mt-[35vh] text-center px-16 text-lg md:text-2xl font-medium"
+          className="font-Zen flex items-center justify-center md:gap-x-[6vw] gap-x-[5.5vw] w-full mt-[15vh] sm:mt-[35vh] text-center px-16 text-sm md:text-2xl font-medium"
         >
           <span>中</span>
           <span>央</span> <span>1</span>
@@ -62,7 +62,7 @@ export default function Hero({}: Props) {
         </motion.div>
         <BsChevronDoubleDown
           className={
-            "absolute bottom-10 lg:bottom-10 -translate-x-1/2 left-1/2 animate-pulse text-white h-10 lg:w-12 w-10 lg:h-12"
+            "absolute bottom-10 lg:bottom-10 -translate-x-1/2 left-1/2 animate-pulse text-teal-950 h-10 lg:w-12 w-10 lg:h-12"
           }
         />
       </div>
