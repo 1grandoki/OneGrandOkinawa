@@ -53,7 +53,7 @@ export default function Header({}: Props) {
     <div
       ref={headerRef}
       style={{ transition: "top 0.3s" }}
-      className="fixed bg-transparent border-b-[1px] border-white/10 top-0 mx-auto w-full select-none z-10"
+      className="fixed bg-transparent border-b-[1px] top-0 mx-auto w-full select-none z-10"
     >
       <Menu as="div" className="mx-auto flex max-w-[1200px] flex-col">
         <div className="mx-5 flex h-20 min-h-[48px] items-center justify-normal md:justify-between">
@@ -141,7 +141,7 @@ export default function Header({}: Props) {
           {/* actions */}
           <motion.div
             viewport={{ once: true }}
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
               duration: 0.4,

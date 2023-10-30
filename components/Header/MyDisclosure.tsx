@@ -28,7 +28,7 @@ export default function MyDisclosure({ title = "Options", elements }: Props) {
                   <Link
                     href={"#"}
                     className={`${
-                      active && `bg-teal-500/50`
+                      active && "bg-teal-500/50"
                     } group flex w-full items-center px-2 py-2 text-sm`}
                   >
                     {val}

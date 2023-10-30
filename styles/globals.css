@@ -30,6 +30,9 @@ body {
 .font-Goth {
   font-family: var(--font-Goth);
 }
+.font-Zen {
+  font-family: var(--font-Zen);
+}
 .font-Mont {
   font-family: var(--font-Mont);
 }

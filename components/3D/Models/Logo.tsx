@@ -14,7 +14,7 @@ import { Power2 } from "gsap";
 
 type GLTFResult = GLTF & {
   nodes: {
-    Text002: THREE.Mesh;
+    Text004: THREE.Mesh;
   };
   materials: {
     ["Material.001"]: THREE.MeshPhysicalMaterial;
@@ -25,16 +25,18 @@ type ContextType = Record<
   string,
   React.ForwardRefExoticComponent<JSX.IntrinsicElements["mesh"]>
 >;
-
-export function Logo(props: JSX.IntrinsicElements["group"]) {
-  const { nodes, materials } = useGLTF("/3d/logo.gltf") as GLTFResult;
+type Props = {
+  scaleV: number;
+} & JSX.IntrinsicElements["group"];
+export function Logo({ scaleV, ...props }: Props) {
+  const { nodes, materials } = useGLTF("/3d/logo2.gltf") as GLTFResult;
   const groupRef = useRef<THREE.Group>(null);
   useEffect(() => {
     if (groupRef.current) {
       gsap.to(groupRef.current.scale, {
-        x: 1,
-        y: 1,
-        z: 1,
+        x: scaleV,
+        y: scaleV,
+        z: scaleV,
         ease: Power4.easeOut,
         duration: 3,
       });
@@ -68,23 +70,30 @@ export function Logo(props: JSX.IntrinsicElements["group"]) {
   // Change animation when the index changes
   return (
     <group
-      scale={[0, 0, 0]}
+      // scale={[0, 0, 0]}
+
       rotation={[0, 0, 0]}
       ref={groupRef}
       {...props}
       dispose={null}
     >
-      <mesh geometry={nodes.Text002.geometry}>
+      <mesh geometry={nodes.Text004.geometry}>
         <meshStandardMaterial
           color={"#acfcca"}
           roughness={0.1}
           metalness={0.9}
-          // roughness={0.31}
-          // metalness={0.41}
+        ></meshStandardMaterial>
+      </mesh>
+      <mesh position={[0.2, 0, 0.35]}>
+        <boxGeometry args={[5.8, 0.2, 0.05]}></boxGeometry>
+        <meshStandardMaterial
+          color={"#acfcca"}
+          roughness={0.1}
+          metalness={0.9}
         ></meshStandardMaterial>
       </mesh>
     </group>
   );
 }
 
-useGLTF.preload("/3d/logo.gltf");
+useGLTF.preload("/3d/logo2.gltf");

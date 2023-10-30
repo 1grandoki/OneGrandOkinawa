@@ -18,7 +18,7 @@ export default function Car_Series({}: Props) {
   }, []);
 
   return (
-    <div className="flex overflow-hidden flex-col items-start  max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
+    <div className="flex overflow-hidden flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.h1
         viewport={{ once: true }}
         initial={{ x: -20, opacity: 0 }}

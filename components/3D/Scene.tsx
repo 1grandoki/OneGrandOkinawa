@@ -10,7 +10,7 @@ import { Logo_Mobile } from "./Models/Logo_mobile";
 type Props = {};
 
 export default function Scene() {
-  const [Z, setZ] = useState(3);
+  const [Z, setZ] = useState(5);
   const CameraControls = () => {
     useFrame((state) => {
       state.camera.lookAt(0, 0, 0);
@@ -81,16 +81,30 @@ export default function Scene() {
     <Canvas
       camera={{ position: [0, 0, Z] }}
       shadows
-      className="!absolute !top-0 -z-10 !left-0 w-full !h-full"
+      className="!absolute !top-1/2 -translate-y-1/2 -z-10 !left-0 w-full !h-auto !aspect-square"
     >
       <Suspense fallback={<Loader></Loader>}>
         {/* <EffectS /> */}
         <Environement />
         {isMobile ? (
-          <Logo_Mobile rotation={[Math.PI / 2, 0, 0]} />
+          // <Logo_Mobile rotation={[Math.PI / 2, 0, 0]} />
+          <Logo
+            scaleV={1}
+            position={[-0.13, 0.57, 0]}
+            rotation={[Math.PI / 2, 0, 0]}
+          />
         ) : (
-          <Logo rotation={[Math.PI / 2, 0, 0]} />
+          <Logo
+            scaleV={1}
+            position={[-0.13, 0.4, 0]}
+            rotation={[Math.PI / 2, 0, 0]}
+          />
         )}
+        {/* <Logo
+          scale={[isMobile ? 0.2 : 1, isMobile ? 0.2 : 1, isMobile ? 0.2 : 1]}
+          position={[0, 0.3, 0]}
+          rotation={[Math.PI / 2, 0, 0]}
+        /> */}
       </Suspense>
       <CameraControls />
     </Canvas>
