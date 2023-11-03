@@ -21,6 +21,21 @@ export default function Car_Series({}: Props) {
     <div className="flex overflow-hidden flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.h1
         viewport={{ once: true }}
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          type: "spring",
+          damping: 15,
+          stiffness: 50,
+        }}
+        className="gap-y-6 md:text-lg flex-col flex items-center justify-start w-full font-medium"
+      >
+        <p>我們主營</p>
+        <p>豪車，中古性能車及超跑的租賃與包車</p>
+      </motion.h1>
+      <motion.h1
+        viewport={{ once: true }}
         initial={{ x: -20, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
@@ -51,6 +66,23 @@ export default function Car_Series({}: Props) {
         <Car_Card image={img4.src} carType={"Exotic"} />
         <Car_Card image={img1.src} carType={"Hyper"} /> */}
       </div>
+      <motion.h1
+        viewport={{ once: true }}
+        initial={{ x: 50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          type: "spring",
+          damping: 15,
+          stiffness: 50,
+        }}
+        className="gap-y-6 md:text-lg flex-col flex items-center justify-start w-full font-medium"
+      >
+        <p>豪車租賃涵蓋四大級別，</p>
+        <p>每一款嚴選車型都是歷代經典中的經典，</p>
+        <p>為滿足您不同的使用場景和心情，</p>
+        <p>交車流程簡單快捷，</p>
+      </motion.h1>
     </div>
   );
 }

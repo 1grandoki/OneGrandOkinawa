@@ -1,0 +1,102 @@
+.animateStrokeShadow {
+  animation: animateS 5s ease-in-out 5s infinite alternate none;
+  -webkit-animation: animate 5s ease-in-out forwards,
+    animateS 5s ease-in-out 5s infinite alternate none;
+  -moz-animation: animate 5s ease-in-out forwards,
+    animateS 5s ease-in-out 5s infinite alternate none;
+  /* stroke-dasharray: 600; */
+  -webkit-filter: drop-shadow(0px 0px 12px #fdd76d99);
+  filter: drop-shadow(0px 0px 12px #fdd76d99);
+  stroke-dashoffset: 900;
+}
+.animateStrokeShadowDark {
+  animation: animate 5s ease-in-out forwards,
+    animateSDark 5s ease-in-out 5s infinite alternate none;
+  -webkit-animation: animate 5s ease-in-out forwards,
+    animateSDark 5s ease-in-out 5s infinite alternate none;
+  -moz-animation: animate 5s ease-in-out forwards,
+    animateSDark 5s ease-in-out 5s infinite alternate none;
+  /* stroke-dasharray: 600; */
+  filter: drop-shadow(0px 0px 12px #3b3b467c);
+  -webkit-filter: drop-shadow(0px 0px 12px #3b3b467c);
+  stroke-dashoffset: 900;
+}
+
+.animateStroke {
+  animation: animate 4s ease-in forwards;
+  -webkit-animation: animate 4s ease-in forwards;
+  -moz-animation: animate 4s ease-in forwards;
+  stroke-dashoffset: 900;
+}
+
+@-moz-keyframes animate {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-webkit-keyframes animate {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+
+@-moz-keyframes animateS {
+  0% {
+    filter: drop-shadow(0px 0px 0px #dedfe399);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #dedfe3e5);
+  }
+}
+
+@-webkit-keyframes animateS {
+  0% {
+    filter: drop-shadow(0px 0px 0px #dedfe399);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #dedfe3e5);
+  }
+}
+
+@keyframes animateS {
+  0% {
+    filter: drop-shadow(0px 0px 0px #dedfe399);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #dedfe3e5);
+  }
+}
+
+@-moz-keyframes animateSDark {
+  0% {
+    filter: drop-shadow(0px 0px 0px #2e2e2e99);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #414142ee);
+  }
+}
+
+@-webkit-keyframes animateSDark {
+  0% {
+    filter: drop-shadow(0px 0px 0px #2e2e2e99);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #414142ee);
+  }
+}
+
+@keyframes animateSDark {
+  0% {
+    filter: drop-shadow(0px 0px 0px #2e2e2e99);
+  }
+  100% {
+    filter: drop-shadow(0px 0px 24px #414142ee);
+  }
+}

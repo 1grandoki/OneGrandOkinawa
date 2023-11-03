@@ -60,11 +60,24 @@ export default function Hero({}: Props) {
         >
           <Image src={logo} alt={"Logo"} fill className="stroke-teal-950" />
         </motion.div>
-        <BsChevronDoubleDown
-          className={
-            "absolute bottom-10 lg:bottom-10 -translate-x-1/2 left-1/2 animate-pulse text-teal-950 h-10 lg:w-12 w-10 lg:h-12"
-          }
-        />
+        <motion.div
+          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            duration: 0.4,
+            type: "spring",
+            damping: 15,
+            stiffness: 50,
+            delay: 0.3,
+          }}
+        >
+          <BsChevronDoubleDown
+            className={
+              "absolute bottom-10 lg:bottom-10 -translate-x-1/2 left-1/2 animate-pulse text-teal-950 h-10 lg:w-12 w-10 lg:h-12"
+            }
+          />
+        </motion.div>
       </div>
     </>
   );
