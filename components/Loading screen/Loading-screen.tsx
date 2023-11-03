@@ -81,9 +81,10 @@ export default function LoadingScreen({ start }: Props) {
 
       <motion.div
         variants={children}
-        className="font-medium  animate-pulse m-6 overflow-hidden small-caps"
+        className="font-medium flex items-center justify-center flex-col animate-pulse m-6 overflow-hidden small-caps"
       >
-        Loading ...
+        <p>Entering The Experience</p>
+        <p>正在進入</p>
       </motion.div>
     </motion.section>
   );

@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Section1({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
+    <div className="flex font-Zen overflow-hidden text-[11px] sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
@@ -54,20 +54,20 @@ export default function Section1({}: Props) {
           stiffness: 50,
           delay: 0.4,
         }}
-        className=""
+        className="flex flex-col tracking-[.2em] items-start justify-start gap-y-3"
       >
-        是日本唯一的國際一級度假海島, 東方夏威夷之稱的沖繩，
+        <p>是日本唯一的國際一級度假海島,</p>
+        <p>東方夏威夷之稱的沖繩，</p>
+        <p>給您不僅在自然景觀上媲美馬爾代夫，斐濟，巴釐島等</p>
+        <p>綺麗的頂級海島風光</p>
         <br />
-        給您不僅在自然景觀上媲美馬爾代夫，斐濟，巴釐島等 綺麗的頂級海島風光
         <br />
         <br />
-        <br />
-        更神奇的是，在那翡翠綠的沖繩海面上，
-        <br />
-        建立著多種多樣的琉球國王文化，日本本島文化，和純正的美國文化，
-        各種交織碰撞且交融的背景下，
-        <br />
-        讓沖繩成為世界上富有魅力獨一無二的存在，
+        <p>更神奇的是，在那翡翠綠的沖繩海面上，</p>
+        <p>建立著多種多樣的琉球國王文化，日本本島文化，和純正</p>
+        <p>的美國文化，</p>
+        <p>各種交織碰撞且交融的背景下，</p>
+        <p>讓沖繩成為世界上富有魅力獨一無二的存在，</p>
       </motion.div>
     </div>
   );

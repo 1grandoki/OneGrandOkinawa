@@ -32,10 +32,10 @@ export default function Section4({}: Props) {
             stiffness: 50,
             delay: 0.3,
           }}
-          className="w-full absolute top-0"
+          className="w-full absolute top-0 flex items-center justify-center"
         >
-          <h1 className="uppercase truncate font-normal absolute py-8 text-white font-Mont -translate-x-1/2 z-10 top-0 left-1/2">
-            One grand okinawa
+          <h1 className="uppercase truncate font-light font-Kanit py-1 text-white font-Mont z-10 ">
+            One grand oki
           </h1>
         </motion.div>
         <Image

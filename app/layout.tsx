@@ -5,6 +5,7 @@ import {
   Zen_Old_Mincho as Zen,
   Krona_One,
   Montserrat,
+  Kanit,
 } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header/Header";
@@ -19,6 +20,11 @@ import LoadingScreen from "@/components/Loading screen/Loading-screen";
 import Head from "next/head";
 
 const mont = Montserrat({ variable: "--font-Mont", subsets: ["latin"] });
+const kanit = Kanit({
+  variable: "--font-Kanit",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 const goth = dela_Gothic_One({
   variable: "--font-Goth",
   subsets: ["latin"],
@@ -29,12 +35,6 @@ const zen = Zen({
   subsets: ["cyrillic", "latin", "latin-ext", "greek"],
   weight: "400",
 });
-// export const metadata: Metadata = {
-//   title: "ONE GRAND OKINAWA",
-//   description: "One Grand Okinawa",
-//   icons: "./logo.svg",
-// };
-
 export default function RootLayout({
   children,
 }: {
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${mont.variable} ${zen.variable} ${goth.variable} scrollbar-thin scrollbar-track-teal-50 scrollbar-thumb-teal-800 selection:bg-teal-500`}
+      className={`${mont.variable} ${zen.variable} ${goth.variable} ${kanit.variable} scrollbar-thin scrollbar-track-teal-50 scrollbar-thumb-teal-800 selection:bg-teal-500`}
     >
       <head>
         {/* <!-- HTML Meta Tags --> */}
@@ -66,20 +66,18 @@ export default function RootLayout({
           }}
         ></div>
 
-        <AnimatePresence mode="wait">
-          {isloading ? (
-            <Fragment key={0}>
-              <LoadingScreen start={start} />
-            </Fragment>
-          ) : (
-            <Fragment key={1}>
-              <Header />
-              {children}
-              <Newsletter />
-              <Footer />
-            </Fragment>
-          )}
-        </AnimatePresence>
+        {/* <AnimatePresence mode="popLayout"> */}
+        {isloading ? (
+          <LoadingScreen start={start} />
+        ) : (
+          <Fragment key={1}>
+            <Header />
+            {children}
+            <Newsletter />
+            <Footer />
+          </Fragment>
+        )}
+        {/* </AnimatePresence> */}
       </body>
     </html>
   );

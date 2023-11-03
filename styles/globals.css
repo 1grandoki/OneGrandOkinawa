@@ -36,6 +36,9 @@ body {
 .font-Mont {
   font-family: var(--font-Mont);
 }
+.font-Kanit {
+  font-family: var(--font-Kanit);
+}
 
 .title {
   /* title:: 21.00px → 60.00px  */

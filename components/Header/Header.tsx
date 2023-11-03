@@ -49,6 +49,20 @@ export default function Header({}: Props) {
       };
     }
   }, [lastScrollY]);
+  const [width, setWidth] = useState<number>(0);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    handleWindowSizeChange();
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 768;
   return (
     <div
       ref={headerRef}
@@ -84,7 +98,7 @@ export default function Header({}: Props) {
           {/* logo & navigation*/}
           <motion.div
             viewport={{ once: true }}
-            initial={{ x: -100, opacity: 0 }}
+            initial={{ x: isMobile ? 0 : -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
               duration: 0.5,

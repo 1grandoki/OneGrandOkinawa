@@ -36,7 +36,8 @@ export default function Section6({}: Props) {
         }}
         className="gap-y-6 flex-col md:text-2xl flex items-center justify-start w-full font-medium"
       >
-        <p>2， 度假觀光 及 行政商務出行 等私人訂製行程</p>
+        <p>2， 度假觀光 及 行政商務出行</p>
+        <p>等私人訂製行程</p>
       </motion.h1>
 
       <motion.div
@@ -62,10 +63,10 @@ export default function Section6({}: Props) {
             stiffness: 50,
             delay: 0.3,
           }}
-          className="w-full absolute top-0"
+          className="w-full absolute top-3 flex items-center justify-center"
         >
-          <h1 className="uppercase font-normal truncate absolute py-8 text-white font-Mont -translate-x-1/2 z-10 top-0 left-1/2">
-            One grand okinawa
+          <h1 className="uppercase truncate text-xs font-light font-Kanit z-10 text-[#0e4b66]">
+            One grand oki
           </h1>
         </motion.div>
         <Image
@@ -87,14 +88,14 @@ export default function Section6({}: Props) {
           stiffness: 50,
           delay: 0.4,
         }}
-        className="gap-y-8 py-5 flex flex-col items-center text-center justify-start"
+        className="gap-y-3 py-5 flex flex-col items-center text-[11px] sm:text-lg text-center justify-start"
       >
         <p>精選生活 ，尊享不凡</p>
-
+        <br />
         <p>每一細節精心打造，</p>
         <p>從專車接送、超豪華住宿</p>
         <p>旅途探索、遊艇派對、商務會面</p>
-
+        <br />
         <p>精雕細琢並充滿想象力的全面行程訂製化</p>
         <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
       </motion.div>

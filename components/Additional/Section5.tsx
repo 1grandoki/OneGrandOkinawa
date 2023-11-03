@@ -18,7 +18,7 @@ export default function Section5({}: Props) {
           damping: 15,
           stiffness: 50,
         }}
-        className="gap-y-6 flex-col absolute top-12 md:text-2xl flex items-center justify-start w-full font-medium"
+        className="gap-y-6 z-10 flex-col absolute top-12 md:text-2xl flex items-center justify-start w-full font-medium"
       >
         <p>對於長期來沖繩度假/生活/商務的高端人士，</p>
         <p>我們有會員會籍的選項</p>
