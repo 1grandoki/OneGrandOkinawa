@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Section7({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}

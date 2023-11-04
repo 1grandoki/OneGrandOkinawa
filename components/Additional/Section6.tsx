@@ -8,7 +8,7 @@ type Props = {};
 
 export default function Section6({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.div
         viewport={{ once: true }}
         initial={{ y: 50, opacity: 0 }}
@@ -34,7 +34,7 @@ export default function Section6({}: Props) {
           damping: 15,
           stiffness: 50,
         }}
-        className="gap-y-6 flex-col md:text-2xl flex items-center justify-start w-full font-medium"
+        className="gap-y-6 flex-col text-lg md:text-2xl flex items-center justify-start w-full font-medium"
       >
         <p>2， 度假觀光 及 行政商務出行</p>
         <p>等私人訂製行程</p>
@@ -88,7 +88,7 @@ export default function Section6({}: Props) {
           stiffness: 50,
           delay: 0.4,
         }}
-        className="gap-y-3 py-5 flex flex-col items-center text-[12px] sm:text-lg text-center justify-start"
+        className="gap-y-3 py-5 flex flex-col items-center text-[14px] sm:text-lg text-center justify-start"
       >
         <p>精選生活 ，尊享不凡</p>
         <br />

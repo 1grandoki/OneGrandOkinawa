@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Section1({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
+    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
@@ -38,7 +38,7 @@ export default function Section1({}: Props) {
             stiffness: 50,
             delay: 0.4,
           }}
-          className="absolute top-[70%] left-[56%] uppercase"
+          className="absolute top-[70%] left-[56%] text-lg truncate uppercase"
         >
           沖繩（<span className="font-Mont">okinawa</span>）
         </motion.h1>
