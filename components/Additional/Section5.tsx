@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import image from "@/public/Images/7.1.png";
 import React from "react";
+import { BsFillTriangleFill } from "react-icons/bs";
+import Link from "next/link";
 
 type Props = {};
 
@@ -24,6 +26,12 @@ export default function Section5({}: Props) {
         <p>我們有會員會籍的選項</p>
         <p>最高可解鎖全系車型</p>
         <p>全年半價使用</p>
+        <Link
+          target="_blank"
+          href="https://one-grand-okinawa.myshopify.com/pages/premium"
+        >
+          <BsFillTriangleFill className="hover:scale-110 transition-all duration-200 active:scale-100 w-6 h-6 text-black" />
+        </Link>
       </motion.h1>
       <Image
         src={image}
