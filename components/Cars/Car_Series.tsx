@@ -29,7 +29,7 @@ export default function Car_Series({}: Props) {
           damping: 15,
           stiffness: 50,
         }}
-        className="gap-y-6 md:text-lg flex-col flex items-center justify-start w-full font-medium"
+        className="gap-y-6 text-[12px] md:text-lg font-Zen flex-col flex items-center justify-start w-full font-medium"
       >
         <p>我們主營</p>
         <p>豪車，中古性能車及超跑的租賃與包車</p>
@@ -76,7 +76,7 @@ export default function Car_Series({}: Props) {
           damping: 15,
           stiffness: 50,
         }}
-        className="gap-y-6 md:text-lg flex-col flex items-center justify-start w-full font-medium"
+        className="font-Zen gap-y-6 text-[12px] md:text-lg flex-col flex items-center justify-start w-full font-medium"
       >
         <p>豪車租賃涵蓋四大級別，</p>
         <p>每一款嚴選車型都是歷代經典中的經典，</p>

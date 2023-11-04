@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Section7({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
@@ -32,9 +32,9 @@ export default function Section7({}: Props) {
             stiffness: 50,
             delay: 0.3,
           }}
-          className="w-full absolute top-5 flex items-center justify-center"
+          className="w-full absolute top-[5%] flex items-center justify-center"
         >
-          <h1 className="uppercase truncate text-xs font-light font-Kanit z-10 text-[#0e4b66]">
+          <h1 className="uppercase truncate text-xs sm:text-lg font-light font-Kanit z-10 text-[#0e4b66]">
             One grand oki
           </h1>
         </motion.div>

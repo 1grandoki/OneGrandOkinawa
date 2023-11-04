@@ -8,7 +8,7 @@ type Props = {};
 
 export default function Section6({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden sm:text-xl font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.div
         viewport={{ once: true }}
         initial={{ y: 50, opacity: 0 }}
@@ -63,9 +63,9 @@ export default function Section6({}: Props) {
             stiffness: 50,
             delay: 0.3,
           }}
-          className="w-full absolute top-3 flex items-center justify-center"
+          className="w-full absolute top-[4%] flex items-center justify-center"
         >
-          <h1 className="uppercase truncate text-xs font-light font-Kanit z-10 text-[#0e4b66]">
+          <h1 className="uppercase truncate text-xs sm:text-lg font-light font-Kanit z-10 text-[#0e4b66]">
             One grand oki
           </h1>
         </motion.div>
@@ -88,7 +88,7 @@ export default function Section6({}: Props) {
           stiffness: 50,
           delay: 0.4,
         }}
-        className="gap-y-3 py-5 flex flex-col items-center text-[11px] sm:text-lg text-center justify-start"
+        className="gap-y-3 py-5 flex flex-col items-center text-[12px] sm:text-lg text-center justify-start"
       >
         <p>精選生活 ，尊享不凡</p>
         <br />

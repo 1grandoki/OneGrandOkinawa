@@ -6,7 +6,7 @@ type Props = {};
 
 export default function Section1({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden text-[11px] sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
+    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-start max-w-[1200px] mx-auto justify-start gap-y-6 px-6 py-12 w-full">
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
@@ -54,7 +54,7 @@ export default function Section1({}: Props) {
           stiffness: 50,
           delay: 0.4,
         }}
-        className="flex flex-col tracking-[.2em] items-start justify-start gap-y-3"
+        className="flex flex-col tracking-[.1em] items-start justify-start gap-y-3"
       >
         <p>是日本唯一的國際一級度假海島,</p>
         <p>東方夏威夷之稱的沖繩，</p>

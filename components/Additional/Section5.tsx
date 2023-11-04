@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Section5({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden sm:text-xl font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[12px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.h1
         viewport={{ once: true }}
         initial={{ x: 50, opacity: 0 }}
@@ -18,7 +18,7 @@ export default function Section5({}: Props) {
           damping: 15,
           stiffness: 50,
         }}
-        className="gap-y-6 z-10 flex-col absolute top-12 md:text-2xl flex items-center justify-start w-full font-medium"
+        className="gap-y-6 z-10 flex-col absolute top-12 md:text-xl flex items-center justify-start w-full font-medium"
       >
         <p>對於長期來沖繩度假/生活/商務的高端人士，</p>
         <p>我們有會員會籍的選項</p>
