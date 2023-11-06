@@ -22,7 +22,7 @@ export default function Section6({}: Props) {
     Fetch();
   }, []);
   return (
-    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
+    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 px-6 py-12 w-full text-center">
       <motion.div
         viewport={{ once: true }}
         initial={{ y: 50, opacity: 0 }}
