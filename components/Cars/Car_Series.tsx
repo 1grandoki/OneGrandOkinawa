@@ -52,7 +52,10 @@ export default function Car_Series({}: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
         {Data &&
           Data.body.data.collections.edges.map((edge: any, index: number) => {
-            if (edge.node.title != "izyrent")
+            if (
+              edge.node.title != "izyrent" &&
+              !(edge.node.title as string).includes("Services")
+            )
               return (
                 <Car_Card
                   key={index}

@@ -1,12 +1,26 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/public/logo.svg";
 import image from "@/public/Images/17.jpg";
+import Car_Card from "../Cars/car_Card";
+import { getCollection } from "@/lib/Shopify";
+import { Body } from "@/lib/Shopify/types";
 
 type Props = {};
 
 export default function Section6({}: Props) {
+  const [Data, setData] = useState<Body | null>(null);
+  useEffect(() => {
+    const Fetch = async () => {
+      const result = await getCollection();
+      if (result?.status === 200) {
+        setData(result);
+      }
+    };
+    Fetch();
+  }, []);
   return (
     <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start gap-y-12 py-12 w-full text-center">
       <motion.div
@@ -95,6 +109,20 @@ export default function Section6({}: Props) {
         <p>每一細節精心打造，</p>
         <p>從專車接送、超豪華住宿</p>
         <p>旅途探索、遊艇派對、商務會面</p>
+        <br />
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
+          {Data &&
+            Data.body.data.collections.edges.map((edge: any, index: number) => {
+              if ((edge.node.title as string).includes("Services"))
+                return (
+                  <Car_Card
+                    key={index}
+                    image={edge.node.products.edges[0].node.featuredImage.url}
+                    carType={edge.node.title}
+                  />
+                );
+            })}
+        </div>
         <br />
         <p>精雕細琢並充滿想象力的全面行程訂製化</p>
         <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
