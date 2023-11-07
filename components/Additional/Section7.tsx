@@ -7,11 +7,8 @@ type Props = {};
 
 export default function Section7({}: Props) {
   return (
-    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start pt-5 !text-teal-950 w-full text-center">
-      <div className="py-12 w-full bg-gradient-to-t from-white to-transparent ">
-        <p>精雕細琢並充滿想象力的全面行程訂製化</p>
-        <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
-      </div>
+    <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start !text-teal-950 w-full text-center">
+      <div className="py-12 w-full h-12 bg-gradient-to-t from-white to-transparent "></div>
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
