@@ -104,13 +104,14 @@ export default function Section6({}: Props) {
         }}
         className="gap-y-3 py-5 flex flex-col items-center text-[14px] sm:text-lg text-center justify-start"
       >
-        <p>精選生活 ，尊享不凡</p>
-        <br />
-        <p>每一細節精心打造，</p>
-        <p>從專車接送、超豪華住宿</p>
-        <p>旅途探索、遊艇派對、商務會面</p>
-        <br />
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-3">
+        <div className="hidden md:flex gap-y-3 flex-col text-center justify-start">
+          <br />
+          <p>每一細節精心打造，</p>
+          <p>從專車接送、超豪華住宿</p>
+          <p>旅途探索、遊艇派對、商務會面</p>
+          <br />
+        </div>
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 w-full gap-3">
           {Data &&
             Data.body.data.collections.edges.map((edge: any, index: number) => {
               if ((edge.node.title as string).includes("Services"))
@@ -123,9 +124,47 @@ export default function Section6({}: Props) {
                 );
             })}
         </div>
-        <br />
-        <p>精雕細琢並充滿想象力的全面行程訂製化</p>
-        <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
+
+        <div className="flex pb-8 md:hidden">
+          <p>精選生活 ，尊享不凡</p>
+        </div>
+        {/* Mobile */}
+        <div className="grid grid-cols-1 md:hidden w-full gap-8">
+          <p className="font-Zen">精雕細琢並充滿想象力的全面行程訂製化</p>
+          {Data &&
+            Data.body.data.collections.edges.map((edge: any, index: number) => {
+              if ((edge.node.title as string).includes("Timeless Services"))
+                return (
+                  <Car_Card
+                    key={index}
+                    image={edge.node.products.edges[0].node.featuredImage.url}
+                    carType={edge.node.title}
+                  />
+                );
+            })}
+          <div className="gap-y-3 flex flex-col items-center text-[14px] sm:text-lg text-center justify-start">
+            <p>每一細節精心打造，</p>
+            <p>從專車接送、超豪華住宿</p>
+            <p>旅途探索、遊艇派對、商務會面</p>
+          </div>
+          {Data &&
+            Data.body.data.collections.edges.map((edge: any, index: number) => {
+              if ((edge.node.title as string).includes("Royal Services"))
+                return (
+                  <Car_Card
+                    key={index}
+                    image={edge.node.products.edges[0].node.featuredImage.url}
+                    carType={edge.node.title}
+                  />
+                );
+            })}
+          <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
+        </div>
+        {/* <div className="hidden md:flex gap-y-3 flex-col text-center justify-start">
+          <br />
+          <p>精雕細琢並充滿想象力的全面行程訂製化</p>
+          <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
+        </div> */}
       </motion.div>
     </div>
   );
