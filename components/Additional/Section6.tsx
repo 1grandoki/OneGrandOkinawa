@@ -142,7 +142,7 @@ export default function Section6({}: Props) {
                   />
                 );
             })}
-          <div className="gap-y-3 flex flex-col items-center text-[14px] sm:text-lg text-center justify-start">
+          <div className="gap-y-6 flex flex-col items-center text-[16px] sm:text-lg text-center justify-start">
             <p>每一細節精心打造，</p>
             <p>從專車接送、超豪華住宿</p>
             <p>旅途探索、遊艇派對、商務會面</p>
