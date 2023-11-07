@@ -129,7 +129,7 @@ export default function Section6({}: Props) {
           <p>精選生活 ，尊享不凡</p>
         </div>
         {/* Mobile */}
-        <div className="grid grid-cols-1 md:hidden w-full gap-8">
+        <div className="grid grid-cols-1 md:hidden w-full gap-y-24">
           <p className="font-Zen">精雕細琢並充滿想象力的全面行程訂製化</p>
           {Data &&
             Data.body.data.collections.edges.map((edge: any, index: number) => {

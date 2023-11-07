@@ -35,12 +35,12 @@ export default function Section5({}: Props) {
             <Link
               target="_blank"
               href="https://one-grand-okinawa.myshopify.com/pages/premium"
-              className="bg-lime-300/75 uppercase rounded-lg flex items-center justify-center py-3 w-28 font-bold active:scale-95 transition-all duration-200 font-Mont text-lime-900"
+              className="bg-[#accda0] uppercase rounded-lg flex text-sm items-center justify-center py-3 w-28 underline active:scale-95 transition-all duration-200 font-Mont text-lime-900"
             >
               Premium
             </Link>
           </div>
-          <div className="flex flex-col items-end justify-start">
+          <div className="flex flex-col items-end justify-start gap-y-6">
             <p>我們有會員會籍的選項</p>
             <p>最高可解鎖全系車型</p>
             <p>全年半價使用</p>
