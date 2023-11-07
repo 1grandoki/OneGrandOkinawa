@@ -8,7 +8,19 @@ type Props = {};
 export default function Section7({}: Props) {
   return (
     <div className="flex font-Zen overflow-hidden text-[14px] sm:text-lg font-medium relative flex-col items-center max-w-[1200px] mx-auto justify-start !text-teal-950 w-full text-center">
-      <div className="py-12 w-full h-12 bg-gradient-to-t from-white to-transparent "></div>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          type: "spring",
+          damping: 15,
+          stiffness: 50,
+          delay: 0.3,
+        }}
+        className="py-12 w-full h-12 bg-gradient-to-t from-white to-transparent "
+      ></motion.div>
       <motion.div
         viewport={{ once: true }}
         initial={{ opacity: 0 }}
@@ -22,19 +34,7 @@ export default function Section7({}: Props) {
         }}
         className="aspect-square flex flex-col items-center justify-start gap-y-5 w-full py-16 relative"
       >
-        <motion.div
-          viewport={{ once: true }}
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{
-            duration: 0.4,
-            type: "spring",
-            damping: 15,
-            stiffness: 50,
-            delay: 0.3,
-          }}
-          className="w-full absolute top-[5%] flex items-center justify-center"
-        >
+        <motion.div className="w-full absolute top-[5%] flex items-center justify-center">
           <h1 className="uppercase truncate text-xs sm:text-lg font-light font-Kanit z-10 text-[#0e4b66]">
             One grand oki
           </h1>
