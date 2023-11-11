@@ -61,8 +61,8 @@ export default function Car_Series({}: Props) {
                 <Car_Card
                   key={index}
                   image={
-                    edge.node.products.edges[0].node.featuredImage.url
-                      ? edge.node.products.edges[0].node.featuredImage.url
+                    edge?.node?.products?.edges[0]?.node?.featuredImage?.url
+                      ? edge?.node?.products?.edges[0]?.node?.featuredImage?.url
                       : "/Images/12.jpeg"
                   }
                   carType={edge.node.title}
