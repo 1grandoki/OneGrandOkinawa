@@ -12,6 +12,7 @@ export default function Car_Series({}: Props) {
       const result = await getCollection();
       if (result?.status === 200) {
         setData(result);
+        console?.log("result:", result);
       }
     };
     Fetch();
@@ -59,15 +60,15 @@ export default function Car_Series({}: Props) {
               return (
                 <Car_Card
                   key={index}
-                  image={edge.node.products.edges[0].node.featuredImage.url}
+                  image={
+                    edge.node.products.edges[0].node.featuredImage.url
+                      ? edge.node.products.edges[0].node.featuredImage.url
+                      : "/Images/12.jpeg"
+                  }
                   carType={edge.node.title}
                 />
               );
           })}
-        {/* <Car_Card image={img3.src} carType={"JDM"} />
-        <Car_Card image={img2.src} carType={"Executive"} />
-        <Car_Card image={img4.src} carType={"Exotic"} />
-        <Car_Card image={img1.src} carType={"Hyper"} /> */}
       </div>
       <motion.h1
         viewport={{ once: true }}
