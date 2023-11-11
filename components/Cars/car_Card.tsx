@@ -32,7 +32,7 @@ export default function Car_Card({ image, carType }: Props) {
           alt={"card"}
           width={600}
           height={600}
-          className="group-hover:scale-110 object-cover w-full group-hover:rotate-2 transition-all duration-1000"
+          className="group-hover:scale-110 aspect-video object-cover w-full group-hover:rotate-2 transition-all duration-1000"
         />
         <div className="bg-black/0 group-hover:bg-black/50 opacity-0 group-hover:opacity-100 duration-500 transition-all absolute top-0 left-0 w-full h-full flex items-center justify-center">
           View more details
