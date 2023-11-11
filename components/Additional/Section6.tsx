@@ -118,8 +118,13 @@ export default function Section6({}: Props) {
                 return (
                   <Car_Card
                     key={index}
-                    image={edge.node.products.edges[0].node.featuredImage.url}
-                    carType={edge.node.title}
+                    image={
+                      edge?.node?.products?.edges[0]?.node?.featuredImage?.url
+                        ? edge?.node?.products?.edges[0]?.node?.featuredImage
+                            ?.url
+                        : "/Images/12.jpeg"
+                    }
+                    carType={edge?.node?.title}
                   />
                 );
             })}
@@ -137,7 +142,12 @@ export default function Section6({}: Props) {
                 return (
                   <Car_Card
                     key={index}
-                    image={edge.node.products.edges[0].node.featuredImage.url}
+                    image={
+                      edge?.node?.products?.edges[0]?.node?.featuredImage?.url
+                        ? edge?.node?.products?.edges[0]?.node?.featuredImage
+                            ?.url
+                        : "/Images/12.jpeg"
+                    }
                     carType={edge.node.title}
                   />
                 );
@@ -153,7 +163,12 @@ export default function Section6({}: Props) {
                 return (
                   <Car_Card
                     key={index}
-                    image={edge.node.products.edges[0].node.featuredImage.url}
+                    image={
+                      edge?.node?.products?.edges[0]?.node?.featuredImage?.url
+                        ? edge?.node?.products?.edges[0]?.node?.featuredImage
+                            ?.url
+                        : "/Images/12.jpeg"
+                    }
                     carType={edge.node.title}
                   />
                 );
