@@ -34,7 +34,6 @@ export default function Section5({}: Props) {
           <div className="flex items-center justify-center">
             <Link
               target="_blank"
-              target="_blank"
               href="https://one-grand-okinawa.myshopify.com/pages/premium"
               className="bg-[#accda0] uppercase rounded-lg flex text-sm items-center justify-center py-3 w-28 underline active:scale-95 transition-all duration-200 font-Mont text-lime-900"
             >
