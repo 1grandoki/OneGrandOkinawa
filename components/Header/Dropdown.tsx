@@ -1,9 +1,14 @@
 import { Menu, Transition } from "@headlessui/react";
+import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 type Props = {
   title?: string;
-  elements: string[];
+  elements: element[];
+};
+type element = {
+  title: string;
+  href: string;
 };
 export default function Dropdown({ title = "Options", elements }: Props) {
   return (
@@ -31,7 +36,12 @@ export default function Dropdown({ title = "Options", elements }: Props) {
           <Menu.Items className="absolute right-0 mt-2 px-2 py-1 w-56 origin-top-right divide-y divide-white/5 text-teal-950/80 bg-teal-500/40 backdrop-blur-[6px] shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
             {elements.map((val, index) => {
               return (
-                <div className="px-1 py-1 " key={index}>
+                <Link
+                  target="_blank"
+                  href={val.href}
+                  className="px-1 py-1 "
+                  key={index}
+                >
                   <Menu.Item>
                     {({ active }) => (
                       <button
@@ -39,11 +49,11 @@ export default function Dropdown({ title = "Options", elements }: Props) {
                           active && "bg-teal-400/50"
                         } group flex w-full items-center px-2 py-2 text-sm`}
                       >
-                        {val}
+                        {val.title}
                       </button>
                     )}
                   </Menu.Item>
-                </div>
+                </Link>
               );
             })}
           </Menu.Items>

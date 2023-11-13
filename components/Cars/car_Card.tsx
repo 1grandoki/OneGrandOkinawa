@@ -6,12 +6,14 @@ import { BsArrowRight } from "react-icons/bs";
 type Props = {
   image: string;
   carType: string;
+  href: string;
 };
 
-export default function Car_Card({ image, carType }: Props) {
+export default function Car_Card({ image, carType, href }: Props) {
   return (
     <Link
-      href={"#"}
+      target="_blank"
+      href={href}
       className="flex group cursor-pointer flex-col items-start justify-start gap-y-2 font-medium"
     >
       <motion.div

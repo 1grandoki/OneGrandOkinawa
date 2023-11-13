@@ -11,6 +11,10 @@ import { Body } from "@/lib/Shopify/types";
 type Props = {};
 
 export default function Section6({}: Props) {
+  const hrefs = [
+    "https://1grandokinawa.com/collections/timeless",
+    "https://1grandokinawa.com/collections/royal-services",
+  ];
   const [Data, setData] = useState<Body | null>(null);
   useEffect(() => {
     const Fetch = async () => {
@@ -114,9 +118,23 @@ export default function Section6({}: Props) {
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 w-full gap-3">
           {Data &&
             Data.body.data.collections.edges.map((edge: any, index: number) => {
-              if ((edge.node.title as string).includes("Services"))
+              if ((edge.node.title as string).includes("Services")) {
+                const href = hrefs.filter((h, index) => {
+                  if (
+                    (edge.node.title as string).includes("Royal") &&
+                    h.includes("royal")
+                  )
+                    return h;
+                  if (
+                    (edge.node.title as string).includes("Timeless") &&
+                    h.includes("timeless")
+                  )
+                    return h;
+                });
+
                 return (
                   <Car_Card
+                    href={href ? href[0] : "#"}
                     key={index}
                     image={
                       edge?.node?.products?.edges[0]?.node?.featuredImage?.url
@@ -127,6 +145,7 @@ export default function Section6({}: Props) {
                     carType={edge?.node?.title}
                   />
                 );
+              }
             })}
         </div>
 
@@ -138,9 +157,22 @@ export default function Section6({}: Props) {
           <p className="font-Zen">精雕細琢並充滿想象力的全面行程訂製化</p>
           {Data &&
             Data.body.data.collections.edges.map((edge: any, index: number) => {
-              if ((edge.node.title as string).includes("Timeless Services"))
+              if ((edge.node.title as string).includes("Timeless Services")) {
+                const href = hrefs.filter((h, index) => {
+                  if (
+                    (edge.node.title as string).includes("Royal") &&
+                    h.includes("royal")
+                  )
+                    return h;
+                  if (
+                    (edge.node.title as string).includes("Timeless") &&
+                    h.includes("timeless")
+                  )
+                    return h;
+                });
                 return (
                   <Car_Card
+                    href={href ? href[0] : "#"}
                     key={index}
                     image={
                       edge?.node?.products?.edges[0]?.node?.featuredImage?.url
@@ -151,6 +183,7 @@ export default function Section6({}: Props) {
                     carType={edge.node.title}
                   />
                 );
+              }
             })}
           <div className="gap-y-6 flex flex-col items-center text-[16px] sm:text-lg text-center justify-start">
             <p>每一細節精心打造，</p>
@@ -159,9 +192,22 @@ export default function Section6({}: Props) {
           </div>
           {Data &&
             Data.body.data.collections.edges.map((edge: any, index: number) => {
-              if ((edge.node.title as string).includes("Royal Services"))
+              if ((edge.node.title as string).includes("Royal Services")) {
+                const href = hrefs.filter((h, index) => {
+                  if (
+                    (edge.node.title as string).includes("Royal") &&
+                    h.includes("royal")
+                  )
+                    return h;
+                  if (
+                    (edge.node.title as string).includes("Timeless") &&
+                    h.includes("timeless")
+                  )
+                    return h;
+                });
                 return (
                   <Car_Card
+                    href={href ? href[0] : "#"}
                     key={index}
                     image={
                       edge?.node?.products?.edges[0]?.node?.featuredImage?.url
@@ -172,6 +218,7 @@ export default function Section6({}: Props) {
                     carType={edge.node.title}
                   />
                 );
+              }
             })}
           <p>確保您絕對絲滑的用戶體驗，全方位尊享</p>
         </div>

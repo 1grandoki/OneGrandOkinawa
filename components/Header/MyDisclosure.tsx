@@ -1,10 +1,13 @@
 import { Disclosure, Menu } from "@headlessui/react";
 import Link from "next/link";
-import { ReactNode } from "react";
 import { FiChevronDown } from "react-icons/fi";
 type Props = {
   title: string;
-  elements: string[];
+  elements: element[];
+};
+type element = {
+  title: string;
+  href: string;
 };
 export default function MyDisclosure({ title = "Options", elements }: Props) {
   //violet
@@ -26,12 +29,13 @@ export default function MyDisclosure({ title = "Options", elements }: Props) {
               <Menu.Item key={index}>
                 {({ active }) => (
                   <Link
-                    href={"#"}
+                    target="_blank"
+                    href={val.href}
                     className={`${
                       active && "bg-teal-500/50"
                     } group flex w-full items-center px-2 py-2 text-sm`}
                   >
-                    {val}
+                    {val.title}
                   </Link>
                 )}
               </Menu.Item>

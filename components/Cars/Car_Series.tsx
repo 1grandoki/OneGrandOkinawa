@@ -6,6 +6,12 @@ import { Body, Collection } from "@/lib/Shopify/types";
 type Props = {};
 
 export default function Car_Series({}: Props) {
+  const hrefs = [
+    "https://1grandokinawa.com/collections/jdm",
+    "https://1grandokinawa.com/collections/executive",
+    "https://1grandokinawa.com/collections/exotic",
+    "https://1grandokinawa.com/collections/hyper",
+  ];
   const [Data, setData] = useState<Body | null>(null);
   useEffect(() => {
     const Fetch = async () => {
@@ -56,9 +62,14 @@ export default function Car_Series({}: Props) {
             if (
               edge.node.title != "izyrent" &&
               !(edge.node.title as string).includes("Services")
-            )
+            ) {
+              const href = hrefs.filter((h, index) => {
+                if (h.includes((edge.node.title as string).toLowerCase()))
+                  return h;
+              });
               return (
                 <Car_Card
+                  href={href ? href[0] : "#"}
                   key={index}
                   image={
                     edge?.node?.products?.edges[0]?.node?.featuredImage?.url
@@ -68,6 +79,7 @@ export default function Car_Series({}: Props) {
                   carType={edge.node.title}
                 />
               );
+            }
           })}
       </div>
       <motion.h1

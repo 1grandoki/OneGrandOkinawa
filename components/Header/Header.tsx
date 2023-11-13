@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { Fragment, useEffect, useRef, useState } from "react";
-import logo from "@/public/logo.png";
 import Link from "next/link";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -109,6 +108,7 @@ export default function Header({}: Props) {
             className="relative mx-auto md:flex-auto flex-1 flex items-center justify-self-center justify-start gap-x-8"
           >
             <Link
+              target="_blank"
               href="/"
               className="relative font-medium uppercase flex w-[150px] cursor-pointer justify-start"
             >
@@ -120,32 +120,52 @@ export default function Header({}: Props) {
               <Dropdown
                 title="Car rental"
                 elements={[
-                  "All",
-                  "Sales",
-                  "JDM",
-                  "Executive",
-                  "Exotic",
-                  "Hyper",
+                  { title: "All", href: "#" },
+                  { title: "Sales", href: "#" },
+                  {
+                    title: "JDM",
+                    href: "https://1grandokinawa.com/collections/jdm",
+                  },
+                  {
+                    title: "Executive",
+                    href: "https://1grandokinawa.com/collections/executive",
+                  },
+                  {
+                    title: "Exotic",
+                    href: "https://1grandokinawa.com/collections/exotic",
+                  },
+                  {
+                    title: "Hyper",
+                    href: "https://1grandokinawa.com/collections/hyper",
+                  },
                 ]}
               />
               <Dropdown
                 title="Services"
                 elements={[
-                  "All",
-                  "Sales",
-                  "Timeless Services",
-                  "Royal Services",
+                  { title: "All", href: "#" },
+                  { title: "Sales", href: "#" },
+                  {
+                    title: "Timeless Services",
+                    href: "https://1grandokinawa.com/collections/timeless",
+                  },
+                  {
+                    title: "Royal Services",
+                    href: "https://1grandokinawa.com/collections/royal-services",
+                  },
                 ]}
               />
               <Link
+                target="_blank"
                 className="flex-auto items-center truncate rounded-2xl py-3 px-4 transition-all duration-300 hover:sm:flex"
-                href="#premium"
+                href="https://1grandokinawa.com/pages/premium"
               >
                 Premium
               </Link>
               <Link
+                target="_blank"
                 className="flex-auto items-center truncate rounded-2xl py-3 px-4 transition-all duration-300 hover:sm:flex"
-                href="#contact"
+                href="https://1grandokinawa.com/pages/contact"
               >
                 Contact us
               </Link>
@@ -236,12 +256,24 @@ export default function Header({}: Props) {
                           <MyDisclosure
                             title="Car rental"
                             elements={[
-                              "All",
-                              "Sales",
-                              "JDM",
-                              "Executive",
-                              "Exotic",
-                              "Hyper",
+                              { title: "All", href: "#" },
+                              { title: "Sales", href: "#" },
+                              {
+                                title: "JDM",
+                                href: "https://1grandokinawa.com/collections/jdm",
+                              },
+                              {
+                                title: "Executive",
+                                href: "https://1grandokinawa.com/collections/executive",
+                              },
+                              {
+                                title: "Exotic",
+                                href: "https://1grandokinawa.com/collections/exotic",
+                              },
+                              {
+                                title: "Hyper",
+                                href: "https://1grandokinawa.com/collections/hyper",
+                              },
                             ]}
                           />
                         </div>
@@ -249,10 +281,16 @@ export default function Header({}: Props) {
                           <MyDisclosure
                             title="Services"
                             elements={[
-                              "All",
-                              "Sales",
-                              "Timeless Services",
-                              "Royal Services",
+                              { title: "All", href: "#" },
+                              { title: "Sales", href: "#" },
+                              {
+                                title: "Timeless Services",
+                                href: "https://1grandokinawa.com/collections/timeless",
+                              },
+                              {
+                                title: "Royal Services",
+                                href: "https://1grandokinawa.com/collections/royal-services",
+                              },
                             ]}
                           />
                         </div>
@@ -260,6 +298,7 @@ export default function Header({}: Props) {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
+                              target="_blank"
                               href={"/"}
                               className={`w-full ${
                                 active ? "cursor-pointer" : ""
@@ -272,7 +311,8 @@ export default function Header({}: Props) {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href={"/"}
+                              target="_blank"
+                              href={"https://1grandokinawa.com/pages/premium"}
                               className={`w-full ${
                                 active ? "cursor-pointer" : ""
                               } group flex w-full items-center px-4 py-[16px] text-sm`}
@@ -284,7 +324,8 @@ export default function Header({}: Props) {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              href={"/"}
+                              target="_blank"
+                              href={"https://1grandokinawa.com/pages/contact"}
                               className={`w-full ${
                                 active ? "cursor-pointer" : ""
                               } group flex w-full items-center px-4 py-[16px] text-sm`}
