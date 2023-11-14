@@ -46,6 +46,19 @@ export default function Section7({}: Props) {
           className="object-cover w-full h-full z-0"
         />
       </motion.div>
+      <motion.div
+        viewport={{ once: true }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{
+          duration: 0.4,
+          type: "spring",
+          damping: 15,
+          stiffness: 50,
+          delay: 0.3,
+        }}
+        className="py-0 w-full h-36 bg-gradient-to-t to-[#f3f3f3] from-transparent "
+      ></motion.div>
     </div>
   );
 }

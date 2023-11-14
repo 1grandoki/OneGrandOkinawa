@@ -9,7 +9,7 @@ export default function Newsletter({}: Props) {
   const [Email, setEmail] = useState<string>("");
 
   return (
-    <div className="bg-transparent border-b-[1px] border-t-[1px] py-10 flex items-center justify-center border-white/10 top-0 mx-auto w-full select-none z-10">
+    <div className="bg-transparent border-b-[1px] border-t-[1px] pb-10 flex items-center justify-center border-white/10 top-0 mx-auto w-full select-none z-10">
       <div className="flex flex-col items-center justify-center gap-y-1">
         <motion.div
           viewport={{ once: true }}
